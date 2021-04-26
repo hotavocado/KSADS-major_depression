@@ -1,0 +1,26 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/ReproNim/reproschema/master/contexts/generic",
+        "https://raw.githubusercontent.com/hotavocado/KSADS-major_depression/master/protocols/KSADS_major_depression/KSADS_major_depression_context"
+    ],
+    "@type": "reproschema:Protocol",
+    "@id": "KSADS_major_depression_schema",
+    "skos:prefLabel": "Major Depression",
+    "schema:description": "Major Depression section for KSADS interview",
+    "landingPage": "https://raw.githubusercontent.com/hotavocado/KSADS-major_depression/master/protocols/KSADS_major_depression/README.md",
+    "schema:schemaVersion": "0.0.1",
+    "schema:version": "0.0.1",
+    "ui": {
+        "addProperties": [
+            {
+                "variableName": "major_depression",
+                "isAbout": "major_depression",
+                "isVis": true
+            }
+        ],
+        "order": [
+            "major_depression"
+        ],
+        "shuffle": false
+    }
+}

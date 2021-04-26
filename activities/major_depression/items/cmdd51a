@@ -1,0 +1,14 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/ReproNim/reproschema/master/contexts/generic"
+    ],
+    "@type": "reproschema:Field",
+    "@id": "cmdd51a",
+    "ui": {
+        "inputType": "text"
+    },
+    "question": "### Duration of Episodes\r\n\r\nHow long was the longest time you felt (sad, grouchy, like nothing was fun)? \r\n\r\n _(N days, N weeks, N months)_",
+    "responseOptions": {
+        "requiredValue": ""
+    }
+}

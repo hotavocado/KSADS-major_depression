@@ -1,0 +1,39 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/ReproNim/reproschema/master/contexts/generic"
+    ],
+    "@type": "reproschema:Field",
+    "@id": "dcmdd069",
+    "ui": {
+        "allow": [
+            "autoAdvance"
+        ],
+        "inputType": "radio"
+    },
+    "question": "### Symptom Frequency\r\n\r\nYou just told me that when you felt (sad/ grouchy/ like nothing was fun) that you also had _(list symptoms)_.  How often did you have these things?",
+    "responseOptions": {
+        "choices": [
+            {
+                "schema:value": 1,
+                "schema:name": "Most days",
+                "@type": "schema:option"
+            },
+            {
+                "schema:value": 2,
+                "schema:name": "About half of the days",
+                "@type": "schema:option"
+            },
+            {
+                "schema:value": 3,
+                "schema:name": "Less than half the days",
+                "@type": "schema:option"
+            },
+            {
+                "schema:value": 9,
+                "schema:name": "Don't know",
+                "@type": "schema:option"
+            }
+        ],
+        "requiredValue": ""
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/ReproNim/reproschema/master/contexts/generic"
+    ],
+    "@type": "reproschema:Field",
+    "@id": "dcmdd092",
+    "responseOptions": {
+        "multipleChoice": true,
+        "choices": [
+            {
+                "schema:value": 0,
+                "schema:name": "Neither",
+                "@type": "schema:option"
+            },
+            {
+                "schema:value": 1,
+                "schema:name": "Alcohol",
+                "@type": "schema:option"
+            },
+            {
+                "schema:value": 2,
+                "schema:name": "Drugs",
+                "@type": "schema:option"
+            },
+            {
+                "schema:value": 9,
+                "schema:name": "Don't know",
+                "@type": "schema:option"
+            }
+        ],
+        "requiredValue": ""
+    },
+    "ui": {
+        "inputType": "radio"
+    },
+    "question": "### Alcohol and Drugs\r\n\r\nWere you using alcohol often or drugs or both during this time? \r\n\r\n _PROBE: Did you increase how you use alcohol/drugs when you started feeling sad/depressed or were you using drugs/alcohol before you started to feel sad/depressed)?_"
+}

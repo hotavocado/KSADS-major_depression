@@ -1,0 +1,14 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/ReproNim/reproschema/master/contexts/generic"
+    ],
+    "@type": "reproschema:Field",
+    "@id": "cmdd54",
+    "ui": {
+        "inputType": "static"
+    },
+    "question": "### Return to Baseline\r\n\r\n\nI would now like to talk about the time **in between** the periods when you felt (sad, grouchy, like nothing was fun).",
+    "responseOptions": {
+        "requiredValue": ""
+    }
+}

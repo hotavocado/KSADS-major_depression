@@ -1,0 +1,14 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/ReproNim/reproschema/master/contexts/generic"
+    ],
+    "@type": "reproschema:Field",
+    "@id": "cmdd0",
+    "ui": {
+        "inputType": "static"
+    },
+    "question": "### Current Episode\r\n\r\nEarlier, you told me there was a time you felt _(insert participant's endorsed symptoms in Screener)_. I'd now like to ask you more about that",
+    "responseOptions": {
+        "requiredValue": ""
+    }
+}

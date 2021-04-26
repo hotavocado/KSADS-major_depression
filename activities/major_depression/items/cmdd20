@@ -1,0 +1,14 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/ReproNim/reproschema/master/contexts/generic"
+    ],
+    "@type": "reproschema:Field",
+    "@id": "cmdd20",
+    "ui": {
+        "inputType": "static"
+    },
+    "question": "### Mordbid Thoughts\r\n\r\nSometimes kids who feel sad, down, or angry think about death or even wish they were dead.",
+    "responseOptions": {
+        "requiredValue": ""
+    }
+}

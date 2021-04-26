@@ -1,0 +1,14 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/ReproNim/reproschema/master/contexts/generic"
+    ],
+    "@type": "reproschema:Field",
+    "@id": "cmdd42",
+    "ui": {
+        "inputType": "static"
+    },
+    "question": "### Episodes/Course (Lifetime)\r\n\r\n_INTERVIEWER: The following questions about course address episodes of depression across the lifetime._",
+    "responseOptions": {
+        "requiredValue": ""
+    }
+}
