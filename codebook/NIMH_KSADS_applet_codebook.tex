@@ -1,0 +1,3751 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+  \usepackage{amssymb}
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Applet Codebook: NIMH KSADS MDD Section NA},
+  pdfauthor={Mike X.},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{Applet Codebook: NIMH KSADS MDD Section NA}
+\author{Mike X.}
+\date{2021-07-13}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\begin{verbatim}
+## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+\end{verbatim}
+
+\begin{verbatim}
+## v ggplot2 3.3.3     v purrr   0.3.4
+## v tibble  3.0.4     v dplyr   1.0.2
+## v tidyr   1.1.2     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.0
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'RCurl'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:tidyr':
+## 
+##     complete
+\end{verbatim}
+
+\hypertarget{part-about}{%
+\part{About}\label{part-about}}
+
+\hypertarget{intro}{%
+\chapter*{About this applet}\label{intro}}
+\addcontentsline{toc}{chapter}{About this applet}
+
+This applet was made based on the NIMH KSADS on Redcap. These sections are in currently in progress:
+
+\begin{itemize}
+\tightlist
+\item
+  Register Interview Child Psychiatric
+\item
+  Tobacco
+\item
+  Alcohol Abuse and Dependence
+\item
+  Drug Use
+\item
+  Caffeine
+\item
+  Interviewer Observation
+\item
+  GAF Scale
+\item
+  Interviewer Notes
+\end{itemize}
+
+The data dictionary used to generate this applet is \href{https://github.com/hotavocado/KSADS_ML_Applet/blob/master/data_dic.csv}{here}.
+
+\emph{These questions were constructed as part of a collaboration between the National Institute of Mental Health and the MATTER Lab of the Child Mind Institute (\url{https://matter.childmind.org}).}
+
+\hypertarget{context_section}{%
+\chapter{Major Depression}\label{context_section}}
+
+\hypertarget{depression_title}{%
+\section{depression\_title}\label{depression_title}}
+
+\textbf{Question}: ``\#\# Major Depression''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+\hypertarget{cmdd0}{%
+\section{cmdd0}\label{cmdd0}}
+
+\textbf{Question}:
+
+"\#\#\# Current Episode
+
+Earlier, you told me there was a time you felt \emph{(insert participant's endorsed symptoms in Screener)}. I'd now like to ask you more about that"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+\hypertarget{dcmdd001}{%
+\section{dcmdd001}\label{dcmdd001}}
+
+\textbf{Question}: ``Do you feel this way now?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd002}{%
+\section{dcmdd002}\label{dcmdd002}}
+
+\textbf{Question}:
+
+"How old were you the last time you felt this way?
+
+\emph{Code 998 if ``always'', 999 if ``unknown''.}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd001}{dcmdd001} = 0
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd1}{%
+\section{cmdd1}\label{cmdd1}}
+
+\textbf{Question}:
+
+"How long did you feel this way?
+
+\emph{(N weeks, N months, N years)}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd001}{dcmdd001} = 0
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd006}{%
+\section{dcmdd006}\label{dcmdd006}}
+
+\textbf{Question}:
+
+"How old were you when this ended?
+
+\emph{Code 998 if ``always'', 999 if ``unknown''.}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd001}{dcmdd001} = 0
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd2}{%
+\section{cmdd2}\label{cmdd2}}
+
+\textbf{Question}:
+
+"If now, how long have you felt this way?
+
+\emph{(N weeks, N months, N years)}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd001}{dcmdd001} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd010}{%
+\section{dcmdd010}\label{dcmdd010}}
+
+\textbf{Question}: ``Was there ever a time you felt worse than this, like for a really long time, or a very severe time?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd011}{%
+\section{dcmdd011}\label{dcmdd011}}
+
+\textbf{Question}:
+
+"How old were you when you felt this way?
+
+\emph{Code 998 if ``always'', 999 if ``unknown''.}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd010}{dcmdd010} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd3}{%
+\section{cmdd3}\label{cmdd3}}
+
+\textbf{Question}:
+
+"How long did you feel this way?
+
+\emph{(N weeks, N months, N years)}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd010}{dcmdd010} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd015}{%
+\section{dcmdd015}\label{dcmdd015}}
+
+\textbf{Question}:
+
+"How old were you when this ended?
+
+\emph{Code 998 if ``always'', 999 if ``unknown''.}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd010}{dcmdd010} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd4}{%
+\section{cmdd4}\label{cmdd4}}
+
+\textbf{Question}:
+
+"Now I would like to talk more about how you felt then.
+
+\emph{INTERVIEWER: Code \textbf{WORST} episode.}"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+\hypertarget{dcmdd016}{%
+\section{dcmdd016}\label{dcmdd016}}
+
+\textbf{Question}:
+
+"\#\#\# Sad Mood
+
+During this time, did you feel:
+
+Sad or depressed?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd017}{%
+\section{dcmdd017}\label{dcmdd017}}
+
+\textbf{Question}: ``Was this feeling different from the feeling you get when something really sad happens or when you see a really sad movie?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd016}{dcmdd016} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd018}{%
+\section{dcmdd018}\label{dcmdd018}}
+
+\textbf{Question}:
+
+"During this time, did you feel:
+
+Hopeless?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd019}{%
+\section{dcmdd019}\label{dcmdd019}}
+
+\textbf{Question}: ``Like there was nothing that you could do to stop the sadness (helplessness)?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd020}{%
+\section{dcmdd020}\label{dcmdd020}}
+
+\textbf{Question}: ``Like things would never get better?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd021}{%
+\section{dcmdd021}\label{dcmdd021}}
+
+\textbf{Question}:
+
+"\#\#\# Irritable Mood/Anger
+
+During this time, did you feel:
+
+Feel grouchy or irritable?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd022}{%
+\section{dcmdd022}\label{dcmdd022}}
+
+\textbf{Question}: ``Feel angry or like you were mad at almost everyone?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd023}{%
+\section{dcmdd023}\label{dcmdd023}}
+
+\textbf{Question}: ``Get annoyed more easily with other people for little things?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd024}{%
+\section{dcmdd024}\label{dcmdd024}}
+
+\textbf{Question}:
+
+"\#\#\# Anhedonia/Loss of Interest
+
+During this time, did you feel:
+
+Like you just weren't interested in anything?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd025}{%
+\section{dcmdd025}\label{dcmdd025}}
+
+\textbf{Question}: ``Like you couldn't have as much fun as usual?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd026}{%
+\section{dcmdd026}\label{dcmdd026}}
+
+\textbf{Question}: ``Bored with things that used to be interesting to you?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd027}{%
+\section{dcmdd027}\label{dcmdd027}}
+
+\textbf{Question}:
+
+"\#\#\# Mood Reactivity
+
+If something good happened, or if someone tried to cheer you up, how much better would you feel, at least for a little while?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+1
+
+Not at all better
+
+2
+
+A little better
+
+3
+
+Somewhat better
+
+4
+
+A lot better
+
+\hypertarget{dcmdd028}{%
+\section{dcmdd028}\label{dcmdd028}}
+
+\textbf{Question}:
+
+"\#\#\# Diurnal Variation
+
+During this time, did you usually feel worse at (a) certain time(s) of the day or night?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd029}{%
+\section{dcmdd029}\label{dcmdd029}}
+
+\textbf{Question}:
+
+"What time of day:
+
+Morning?"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd028}{dcmdd028} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd030}{%
+\section{dcmdd030}\label{dcmdd030}}
+
+\textbf{Question}: ``Afternoon?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd028}{dcmdd028} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd031}{%
+\section{dcmdd031}\label{dcmdd031}}
+
+\textbf{Question}: ``Evening?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd028}{dcmdd028} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd032}{%
+\section{dcmdd032}\label{dcmdd032}}
+
+\textbf{Question}: ``Late night?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd028}{dcmdd028} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd033}{%
+\section{dcmdd033}\label{dcmdd033}}
+
+\textbf{Question}:
+
+"\#\#\# Sleep
+
+During this time, did you have problems falling asleep?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd034}{%
+\section{dcmdd034}\label{dcmdd034}}
+
+\textbf{Question}: ``Did you have problems with waking up in the middle of the night?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd035}{%
+\section{dcmdd035}\label{dcmdd035}}
+
+\textbf{Question}: ``Did you wake up before you had to in the morning?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd036}{%
+\section{dcmdd036}\label{dcmdd036}}
+
+\textbf{Question}: ``How many hours earlier?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd035}{dcmdd035} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd037}{%
+\section{dcmdd037}\label{dcmdd037}}
+
+\textbf{Question}:
+
+"
+Did you sleep much more than usual for you?
+
+\emph{INTERVIEWER: Count night sleep and naps as well.}"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd038}{%
+\section{dcmdd038}\label{dcmdd038}}
+
+\textbf{Question}:
+
+"\#\#\# Eating Disturbances
+
+During this time, did you eat \textbf{less} or feel \textbf{less hungry} than usual? (Did you lose weight)"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd039}{%
+\section{dcmdd039}\label{dcmdd039}}
+
+\textbf{Question}: ``Did you eat \textbf{more} or feel \textbf{more hungry} than usual?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd040}{%
+\section{dcmdd040}\label{dcmdd040}}
+
+\textbf{Question}: ``Did you gain weight?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd039}{dcmdd039} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd042}{%
+\section{dcmdd042}\label{dcmdd042}}
+
+\textbf{Question}:
+
+"\#\#\# Psychomotor Changes
+
+During this time, did you have trouble sitting still?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd043}{%
+\section{dcmdd043}\label{dcmdd043}}
+
+\textbf{Question}: ``Did you feel like you had to keep moving around? (Like walking back and forth?)''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd044}{%
+\section{dcmdd044}\label{dcmdd044}}
+
+\textbf{Question}: ``Did you \textbf{move} more slowly than usual?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd045}{%
+\section{dcmdd045}\label{dcmdd045}}
+
+\textbf{Question}: ``Did you \textbf{think} more slowly than usual?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd046}{%
+\section{dcmdd046}\label{dcmdd046}}
+
+\textbf{Question}: ``Did you \textbf{speak} more slowly than usual?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd047}{%
+\section{dcmdd047}\label{dcmdd047}}
+
+\textbf{Question}: ``Did anyone notice that you were \emph{(list endorsed psychomotor changes)}?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd042}{dcmdd042} = 1 or \protect\hyperlink{dcmdd043}{dcmdd043} = 1 or \protect\hyperlink{dcmdd044}{dcmdd044} = 1 or \protect\hyperlink{dcmdd045}{dcmdd045} = 1 or \protect\hyperlink{dcmdd046}{dcmdd046} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd048}{%
+\section{dcmdd048}\label{dcmdd048}}
+
+\textbf{Question}:
+
+"\#\#\# Energy/Leaden Paralysis
+
+Did you feel really tired or have less energy than usual?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd049}{%
+\section{dcmdd049}\label{dcmdd049}}
+
+\textbf{Question}: ``Did doing even little things make you feel really tired, like going up stairs, getting out of a chair, or getting out of bed (for school)?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd050}{%
+\section{dcmdd050}\label{dcmdd050}}
+
+\textbf{Question}: ``Did it take more time to do the things that you usually do, like getting dressed in the morning?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd051}{%
+\section{dcmdd051}\label{dcmdd051}}
+
+\textbf{Question}: ``Did you have trouble getting started doing the activities that you usually do?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd052}{%
+\section{dcmdd052}\label{dcmdd052}}
+
+\textbf{Question}: ``Did your arms and legs feel heavy, like you were weighed down by them?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd053}{%
+\section{dcmdd053}\label{dcmdd053}}
+
+\textbf{Question}:
+
+"\#\#\# Cognition
+
+Was it harder to keep your mind on things--like when doing homework or trying to remember something?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd054}{%
+\section{dcmdd054}\label{dcmdd054}}
+
+\textbf{Question}: ``Was it harder to think clearly?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd055}{%
+\section{dcmdd055}\label{dcmdd055}}
+
+\textbf{Question}: ``Was it harder to make up your mind or make decisions?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd056}{%
+\section{dcmdd056}\label{dcmdd056}}
+
+\textbf{Question}: ``Did you have problems remembering things?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd057}{%
+\section{dcmdd057}\label{dcmdd057}}
+
+\textbf{Question}:
+
+"\#\#\# Worthlessness
+
+Did you blame yourself for bad things that happened?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd058}{%
+\section{dcmdd058}\label{dcmdd058}}
+
+\textbf{Question}: ``Did you feel like you didn't really matter?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd059}{%
+\section{dcmdd059}\label{dcmdd059}}
+
+\textbf{Question}:
+
+"Did you feel bad about yourself even though there wasn't any real reason to feel like that?
+
+For example, did you start feeling that you weren't good-looking enough, that people wouldn't like you, that you weren't smart enough, or that you couldn't do anything well?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd060}{%
+\section{dcmdd060}\label{dcmdd060}}
+
+\textbf{Question}:
+
+"\#\#\# Interpersonal Sensitivity
+
+\emph{(Not specific to episode)} In general, do you get your feelings hurt easily when other kids tease you or don't want to play with you?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd061}{%
+\section{dcmdd061}\label{dcmdd061}}
+
+\textbf{Question}: ``Do you think that you are more sensitive or get your feelings hurt more easily than other kids your age?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd062}{%
+\section{dcmdd062}\label{dcmdd062}}
+
+\textbf{Question}: ``Have other people ever told you that you were more sensitive than you should be?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd063}{%
+\section{dcmdd063}\label{dcmdd063}}
+
+\textbf{Question}: ``\emph{(Episode specific)} When you were feeling (sad, grouchy, like nothing was fun) were you even more sensitive than usual?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{cmdd20}{%
+\section{cmdd20}\label{cmdd20}}
+
+\textbf{Question}:
+
+"\#\#\# Mordbid Thoughts
+
+Sometimes kids who feel sad, down, or angry think about death or even wish they were dead."
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+\hypertarget{dcmdd064}{%
+\section{dcmdd064}\label{dcmdd064}}
+
+\textbf{Question}:
+
+"During this time:
+
+Did you think about death?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd065}{%
+\section{dcmdd065}\label{dcmdd065}}
+
+\textbf{Question}: ``Did you ever think about killing yourself?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd066}{%
+\section{dcmdd066}\label{dcmdd066}}
+
+\textbf{Question}: ``How often did you think about these things during this time?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd065}{dcmdd065} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+1
+
+Most of the time
+
+2
+
+Sometimes
+
+3
+
+Not very often
+
+9
+
+Don't know
+
+\hypertarget{dcmdd067}{%
+\section{dcmdd067}\label{dcmdd067}}
+
+\textbf{Question}: ``Did you make a plan to kill yourself?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd065}{dcmdd065} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd068}{%
+\section{dcmdd068}\label{dcmdd068}}
+
+\textbf{Question}: ``Did you try to kill yourself?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd065}{dcmdd065} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd069}{%
+\section{dcmdd069}\label{dcmdd069}}
+
+\textbf{Question}:
+
+"\#\#\# Symptom Frequency
+
+You just told me that when you felt (sad/ grouchy/ like nothing was fun) that you also had \emph{(list symptoms)}. How often did you have these things?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+1
+
+Most days
+
+2
+
+About half of the days
+
+3
+
+Less than half the days
+
+9
+
+Don't know
+
+\hypertarget{dcmdd070}{%
+\section{dcmdd070}\label{dcmdd070}}
+
+\textbf{Question}: ``On the days you had these things, how much of the day did you have them?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+1
+
+All of the day
+
+2
+
+Most of the day
+
+3
+
+Half of the day
+
+4
+
+Only a little part of the day
+
+\hypertarget{dcmdd071}{%
+\section{dcmdd071}\label{dcmdd071}}
+
+\textbf{Question}:
+
+"\#\#\# Psychosis (Episode)
+
+\textbf{Delusions:}
+
+During this time, did you think that your (list symptoms) was a punishment for something you had done?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd072}{%
+\section{dcmdd072}\label{dcmdd072}}
+
+\textbf{Question}: ``Did you think that something terrible was going to happen, or that someone was trying to hurt you or was talking about you?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd073}{%
+\section{dcmdd073}\label{dcmdd073}}
+
+\textbf{Question}: ``Did you think that something had gone wrong with your body?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd074}{%
+\section{dcmdd074}\label{dcmdd074}}
+
+\textbf{Question}: ``\emph{INTERVIEWER: Based on clinical judgment, were these \textbf{real delusions}? (record examples on the following screens)}''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd071}{dcmdd071} = 1 or \protect\hyperlink{dcmdd072}{dcmdd072} = 1 or \protect\hyperlink{dcmdd073}{dcmdd073} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd075a}{%
+\section{dcmdd075a}\label{dcmdd075a}}
+
+\textbf{Question}: ``Delusions Example 1:''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd074}{dcmdd074} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd075b}{%
+\section{dcmdd075b}\label{dcmdd075b}}
+
+\textbf{Question}: ``Delusions Example 2:''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd074}{dcmdd074} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd075c}{%
+\section{dcmdd075c}\label{dcmdd075c}}
+
+\textbf{Question}: ``Delusions Example 3:''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd074}{dcmdd074} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd075d}{%
+\section{dcmdd075d}\label{dcmdd075d}}
+
+\textbf{Question}: ``Delusions Example 4:''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd074}{dcmdd074} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd076}{%
+\section{dcmdd076}\label{dcmdd076}}
+
+\textbf{Question}: ``Did these \emph{(list endorsed delusions)} start before, after or at the same time that you started feeling (sad, grouchy, like nothing was fun)?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd074}{dcmdd074} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+1
+
+Before
+
+2
+
+During
+
+3
+
+After
+
+9
+
+Don't know
+
+\hypertarget{dcmdd077}{%
+\section{dcmdd077}\label{dcmdd077}}
+
+\textbf{Question}:
+
+"\#\#\# Hallucinations
+
+During this time, did you see or hear things that other people could not see or hear?
+
+\emph{PROBE: Like voices talking to you or noises, or visions?}"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+7
+
+N/A
+
+\hypertarget{dcmdd078}{%
+\section{dcmdd078}\label{dcmdd078}}
+
+\textbf{Question}: ``Did you experience funny or unusual smells, tastes, or sensations in your body?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+7
+
+N/A
+
+\hypertarget{dcmdd079}{%
+\section{dcmdd079}\label{dcmdd079}}
+
+\textbf{Question}: ``\emph{INTERVIEWER: Based on clinical judgment, were these \textbf{real hallucinations}? (record examples on the following screens)}''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd077}{dcmdd077} = 1 or \protect\hyperlink{dcmdd078}{dcmdd078} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+7
+
+N/A
+
+\hypertarget{dcmdd080a}{%
+\section{dcmdd080a}\label{dcmdd080a}}
+
+\textbf{Question}: ``Hallucinations Example 1:''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd079}{dcmdd079} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd080b}{%
+\section{dcmdd080b}\label{dcmdd080b}}
+
+\textbf{Question}: ``Hallucinations Example 2:''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd079}{dcmdd079} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd080c}{%
+\section{dcmdd080c}\label{dcmdd080c}}
+
+\textbf{Question}: ``Hallucinations Example 3:''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd079}{dcmdd079} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd080d}{%
+\section{dcmdd080d}\label{dcmdd080d}}
+
+\textbf{Question}: ``Hallucinations Example 4:''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd079}{dcmdd079} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd081}{%
+\section{dcmdd081}\label{dcmdd081}}
+
+\textbf{Question}: ``Did these \emph{(list endorsed hallucinations)} start before, after or at the same time that you started feeling (sad, grouchy, like nothing was fun)?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd079}{dcmdd079} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+1
+
+Before
+
+2
+
+During
+
+3
+
+After
+
+9
+
+Don't know
+
+\hypertarget{dcmdd082}{%
+\section{dcmdd082}\label{dcmdd082}}
+
+\textbf{Question}: ``Did they stay even when you stopped feeling (sad, grouchy, like nothing was fun)?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd079}{dcmdd079} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{cmdd26}{%
+\section{cmdd26}\label{cmdd26}}
+
+\textbf{Question}:
+
+"For how long did you have them?
+
+\emph{(N days, N weeks)}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd079}{dcmdd079} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd085}{%
+\section{dcmdd085}\label{dcmdd085}}
+
+\textbf{Question}:
+
+"\#\#\# Mood Congruency
+
+\emph{INTERVIEWER: If respondent had any psychotic symptoms, was the content \textbf{consistent} with depressive themes such as poverty, guilt, illness, personal inadequacy or catastrophe?}"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+7
+
+N/A
+
+\hypertarget{cmdd28}{%
+\section{cmdd28}\label{cmdd28}}
+
+\textbf{Question}:
+
+"\#\#\# Associated Conditions (Episode)
+
+\emph{INTERVIEWER: Associated condition questions apply \textbf{ONLY} to episode being coded.}"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+\hypertarget{dcmdd086}{%
+\section{dcmdd086}\label{dcmdd086}}
+
+\textbf{Question}:
+
+"\#\#\# Medical
+
+When you were feeling (sad, grouchy, like nothing was fun):
+
+Did you have a serious physical problem or illness?
+
+\emph{Probe: Did the physical problem/illness happen before the sad/depressed feelings or after?}"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd087}{%
+\section{dcmdd087}\label{dcmdd087}}
+
+\textbf{Question}: ``Specify the serious physical problem or illness:''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd086}{dcmdd086} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd088}{%
+\section{dcmdd088}\label{dcmdd088}}
+
+\textbf{Question}:
+
+"Were you taking any medicines that your doctor told you to take?
+
+\emph{PROBE: Did you start taking the medicine before feeling sad/depressed or after?}"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd089}{%
+\section{dcmdd089}\label{dcmdd089}}
+
+\textbf{Question}: ``Specify (Medication 1):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd088}{dcmdd088} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd090}{%
+\section{dcmdd090}\label{dcmdd090}}
+
+\textbf{Question}: ``Specify (Medication 2):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd088}{dcmdd088} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd091}{%
+\section{dcmdd091}\label{dcmdd091}}
+
+\textbf{Question}: ``Specify (Medication 3):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd088}{dcmdd088} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd30}{%
+\section{cmdd30}\label{cmdd30}}
+
+\textbf{Question}: ``\emph{INTERVIEWER: Is the participant under 12 years old?}''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd092}{%
+\section{dcmdd092}\label{dcmdd092}}
+
+\textbf{Question}:
+
+"\#\#\# Alcohol and Drugs
+
+Were you using alcohol often or drugs or both during this time?
+
+\emph{PROBE: Did you increase how you use alcohol/drugs when you started feeling sad/depressed or were you using drugs/alcohol before you started to feel sad/depressed)?}"
+
+\textbf{Visibility}: \protect\hyperlink{cmdd30}{cmdd30} = 0
+
+\textbf{Item Type}: Multi-select checkbox
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+Neither
+
+1
+
+Alcohol
+
+2
+
+Drugs
+
+9
+
+Don't know
+
+\hypertarget{dcmdd093}{%
+\section{dcmdd093}\label{dcmdd093}}
+
+\textbf{Question}: ``Specify (Alcohol and/or drug and quantity 1):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd092}{dcmdd092}.includes(1) or \protect\hyperlink{dcmdd092}{dcmdd092}.includes(2)
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd094}{%
+\section{dcmdd094}\label{dcmdd094}}
+
+\textbf{Question}: ``Specify (Alcohol and/or drug and quantity 2):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd092}{dcmdd092}.includes(1) or \protect\hyperlink{dcmdd092}{dcmdd092}.includes(2)
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd095}{%
+\section{dcmdd095}\label{dcmdd095}}
+
+\textbf{Question}: ``Specify (Alcohol and/or drug and quantity 3):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd092}{dcmdd092}.includes(1) or \protect\hyperlink{dcmdd092}{dcmdd092}.includes(2)
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd096}{%
+\section{dcmdd096}\label{dcmdd096}}
+
+\textbf{Question}:
+
+"\#\#\# Bereavement
+
+Did you start feeling (sad, grouchy, like nothing was fun) soon after someone close to you died?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd097}{%
+\section{dcmdd097}\label{dcmdd097}}
+
+\textbf{Question}: ``Specify (Relationship):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd096}{dcmdd096} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd34}{%
+\section{cmdd34}\label{cmdd34}}
+
+\textbf{Question}: ``Date of death''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd096}{dcmdd096} = 1
+
+\textbf{Item Type}: Date picker
+
+\textbf{Responses}: \emph{Date via date picker widget}
+
+\hypertarget{cmdd35a}{%
+\section{cmdd35a}\label{cmdd35a}}
+
+\textbf{Question}:
+
+"\#\#\# Distress (Episode)
+
+I want to know how much your depression and other symptoms caused problems for you. Please look at the scale: Participant Card 8 (Distress/Impairment)
+
+\emph{INTERVIEWER: Remind child how to use scale, if necessary, and assess areas most pertinent to the disorder; e.g.~family, school, peers.}"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+\hypertarget{dcmdd100}{%
+\section{dcmdd100}\label{dcmdd100}}
+
+\textbf{Question}: ``How much did your feeling (sad, grouchy, like nothing was fun) and (list other symptoms) upset or bother you?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10
+
+10
+
+998
+
+Unknown
+
+\hypertarget{dcmdd101}{%
+\section{dcmdd101}\label{dcmdd101}}
+
+\textbf{Question}:
+
+"\#\#\# Impairment (Episode)
+
+How much did your feeling (sad, grouchy, like nothing was fun) you told me about cause problems for you at home, at school, or with your family or friends?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+0
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+5
+
+5
+
+6
+
+6
+
+7
+
+7
+
+8
+
+8
+
+9
+
+9
+
+10
+
+10
+
+998
+
+Unknown
+
+\hypertarget{dcmdd102}{%
+\section{dcmdd102}\label{dcmdd102}}
+
+\textbf{Question}: ``Did you stay home from school because of the way you were feeling?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd103}{%
+\section{dcmdd103}\label{dcmdd103}}
+
+\textbf{Question}: ``How many days of school did you miss? (episode)''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd102}{dcmdd102} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd104}{%
+\section{dcmdd104}\label{dcmdd104}}
+
+\textbf{Question}:
+
+"\#\#\# Help Seeking Treatment
+
+Did you or your parents ever try to find help from a doctor or other professional for (list symptoms)?"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd105}{%
+\section{dcmdd105}\label{dcmdd105}}
+
+\textbf{Question}: ``Did anyone, like a teacher or family member, suggest that you get help for (list symptoms)?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd106}{%
+\section{dcmdd106}\label{dcmdd106}}
+
+\textbf{Question}: ``Did you ever go to see a doctor, nurse, counselor, social worker, psychologist, priest/minister or other professional to get help for (list symptoms)?''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{cmdd39}{%
+\section{cmdd39}\label{cmdd39}}
+
+\textbf{Question}:
+
+"What kind of person did you get help from?
+
+\emph{INTERVIEWER: Refer to Participant Card 13 (Professional/Treatment), record and code responses in the following screens.}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+\hypertarget{dcmdd107}{%
+\section{dcmdd107}\label{dcmdd107}}
+
+\textbf{Question}: ``Specify (Professional/Treatment 1):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd108}{%
+\section{dcmdd108}\label{dcmdd108}}
+
+\textbf{Question}: ``Code (Professional/Treatment 1):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd109}{%
+\section{dcmdd109}\label{dcmdd109}}
+
+\textbf{Question}: ``Specify (Professional/Treatment 2):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd110}{%
+\section{dcmdd110}\label{dcmdd110}}
+
+\textbf{Question}: ``Code (Professional/Treatment 2):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd111}{%
+\section{dcmdd111}\label{dcmdd111}}
+
+\textbf{Question}: ``Specify (Professional/Treatment 3):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd112}{%
+\section{dcmdd112}\label{dcmdd112}}
+
+\textbf{Question}: ``Code (Professional/Treatment 3):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd113}{%
+\section{dcmdd113}\label{dcmdd113}}
+
+\textbf{Question}:
+
+"\emph{INTERVIEWER: If you listed multiple people, ask this question. If not, \textbf{Skip}:}
+
+Who did you get help from the first time?
+
+Specify (Professional/Treatment):"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd115}{%
+\section{dcmdd115}\label{dcmdd115}}
+
+\textbf{Question}: ``Code (Professional/Treatment):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd116}{%
+\section{dcmdd116}\label{dcmdd116}}
+
+\textbf{Question}:
+
+"How old were you the first time you got help?
+
+\emph{Code 998 if ``always'', 999 if ``unknown''.}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd117}{%
+\section{dcmdd117}\label{dcmdd117}}
+
+\textbf{Question}: ``Are you getting help now?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd118}{%
+\section{dcmdd118}\label{dcmdd118}}
+
+\textbf{Question}:
+
+"How old were you the last time you got help?
+
+\emph{Code 998 if ``always'', 999 if ``unknown''.}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd117}{dcmdd117} = 0
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd119}{%
+\section{dcmdd119}\label{dcmdd119}}
+
+\textbf{Question}: ``Did you get help during the first time we talked about?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd120}{%
+\section{dcmdd120}\label{dcmdd120}}
+
+\textbf{Question}: ``What did the professional say that you had (diagnoses given)? List:''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd40}{%
+\section{cmdd40}\label{cmdd40}}
+
+\textbf{Question}: ``What kind of treatment(s) have you gotten? \emph{(Check all that apply)}''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Multi-select checkbox
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+1
+
+Out-patient (Going to see someone in an office)
+
+2
+
+In-patient (Staying in a hospital)
+
+3
+
+Other
+
+\hypertarget{dcmdd124}{%
+\section{dcmdd124}\label{dcmdd124}}
+
+\textbf{Question}: ``Specify (Other treatment):''
+
+\textbf{Visibility}: \protect\hyperlink{cmdd40}{cmdd40}.includes(3)
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd125}{%
+\section{dcmdd125}\label{dcmdd125}}
+
+\textbf{Question}:
+
+"Were you on medications?
+
+\emph{INTERVIEWER: Refer to Participant Card 9 (Medications), record and code responses in the following screens.}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd106}{dcmdd106} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd126}{%
+\section{dcmdd126}\label{dcmdd126}}
+
+\textbf{Question}: ``Specify (Medication 1):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd125}{dcmdd125} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd127}{%
+\section{dcmdd127}\label{dcmdd127}}
+
+\textbf{Question}: ``Code (Medication 1):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd125}{dcmdd125} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd128}{%
+\section{dcmdd128}\label{dcmdd128}}
+
+\textbf{Question}: ``Specify (Medication 2):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd125}{dcmdd125} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd129}{%
+\section{dcmdd129}\label{dcmdd129}}
+
+\textbf{Question}: ``Code (Medication 2):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd125}{dcmdd125} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd130}{%
+\section{dcmdd130}\label{dcmdd130}}
+
+\textbf{Question}: ``Specify (Medication 3):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd125}{dcmdd125} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd131}{%
+\section{dcmdd131}\label{dcmdd131}}
+
+\textbf{Question}: ``Code (Medication 3):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd125}{dcmdd125} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd132}{%
+\section{dcmdd132}\label{dcmdd132}}
+
+\textbf{Question}: ``Specify (Medication 4):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd125}{dcmdd125} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd133}{%
+\section{dcmdd133}\label{dcmdd133}}
+
+\textbf{Question}: ``Code (Medication 4):''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd125}{dcmdd125} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd42}{%
+\section{cmdd42}\label{cmdd42}}
+
+\textbf{Question}:
+
+"\#\#\# Episodes/Course (Lifetime)
+
+\emph{INTERVIEWER: The following questions about course address episodes of depression across the lifetime.}"
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+\hypertarget{dcmdd134}{%
+\section{dcmdd134}\label{dcmdd134}}
+
+\textbf{Question}: ``\emph{INTERVIEWER: Is there \textbf{more than one} depressive episode? (Check with participant if unsure)}''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd135}{%
+\section{dcmdd135}\label{dcmdd135}}
+
+\textbf{Question}:
+
+"\#\#\# First Lifetime Episode
+
+How old were you the very first time in your life that you felt (sad, depressed/ grouchy, like nothing was fun)?
+
+\emph{Code 998 if ``always'', 999 if ``unknown''.}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd47}{%
+\section{cmdd47}\label{cmdd47}}
+
+\textbf{Question}:
+
+"How long did it last?
+
+\emph{(N days, N weeks, N months)}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd138}{%
+\section{dcmdd138}\label{dcmdd138}}
+
+\textbf{Question}:
+
+"How old were you when it ended?
+
+\emph{Code 998 if ``always'', 999 if ``unknown''.}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd139}{%
+\section{dcmdd139}\label{dcmdd139}}
+
+\textbf{Question}:
+
+"\#\#\# Number of Episodes
+
+Including the times you just told me about, how many different times in your life have you felt (sad, grouchy, like nothing was fun)?"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd49}{%
+\section{cmdd49}\label{cmdd49}}
+
+\textbf{Question}:
+
+"How long did each of these episodes \textbf{typically} last?
+
+\emph{(N days, N weeks, N months)}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd51a}{%
+\section{cmdd51a}\label{cmdd51a}}
+
+\textbf{Question}:
+
+"\#\#\# Duration of Episodes
+
+How long was the longest time you felt (sad, grouchy, like nothing was fun)?
+
+\emph{(N days, N weeks, N months)}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd51}{%
+\section{cmdd51}\label{cmdd51}}
+
+\textbf{Question}:
+
+"How long was the shortest time you felt this way?
+
+\emph{(N days, N weeks, N months)}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{cmdd52}{%
+\section{cmdd52}\label{cmdd52}}
+
+\textbf{Question}:
+
+"How long do the (sad, depression, grouchy, like nothing was fun) feelings \textbf{usually} last?
+
+\emph{(N days, N weeks, N months)}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Text input
+
+\textbf{Responses}: \emph{Free text entry}
+
+\hypertarget{dcmdd152}{%
+\section{dcmdd152}\label{dcmdd152}}
+
+\textbf{Question}: ``Have these sad feelings lasted most of the time for as long as one year?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd153}{%
+\section{dcmdd153}\label{dcmdd153}}
+
+\textbf{Question}: ``Would you say that you have been (sad, depressed, grouchy, like nothing was fun) more often than not during your lifetime?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd154}{%
+\section{dcmdd154}\label{dcmdd154}}
+
+\textbf{Question}:
+
+"\#\#\# Seasonal Variation
+
+Did you feel (sad, grouchy, like nothing was fun) at certain times of the year, like in the winter, spring, summer, or fall?"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No pattern
+
+1
+
+Winter
+
+2
+
+Spring
+
+3
+
+Summer
+
+4
+
+Fall
+
+9
+
+Unknown
+
+\hypertarget{cmdd54}{%
+\section{cmdd54}\label{cmdd54}}
+
+\textbf{Question}:
+
+"\#\#\# Return to Baseline
+
+I would now like to talk about the time \textbf{in between} the periods when you felt (sad, grouchy, like nothing was fun)."
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+\hypertarget{dcmdd155}{%
+\section{dcmdd155}\label{dcmdd155}}
+
+\textbf{Question}: ``Between these times, did you \textbf{return} to how you usually feel?''
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{cmdd55}{%
+\section{cmdd55}\label{cmdd55}}
+
+\textbf{Question}:
+
+"\#\#\# Atypical Episodes
+
+\emph{INTERVIEWER: Were any episodes coded \textbf{atypical in nature}, i.e., the respondent had symptoms of mood reactivity, overeating, oversleeping, interpersonal sensitivity and leaden paralysis? (Check with participant if unsure)}"
+
+\textbf{Visibility}: \protect\hyperlink{dcmdd134}{dcmdd134} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{cmdd56}{%
+\section{cmdd56}\label{cmdd56}}
+
+\textbf{Question}:
+
+"You mentioned earlier that you had changes in your eating, sleeping, and sensitivity during the times that we discussed. Did you have any of the following during \textbf{other times} that you were depressed that we did not talk about:
+
+\emph{INTERVIEWER: Proceed questions on the following screens}"
+
+\textbf{Visibility}: \protect\hyperlink{cmdd55}{cmdd55} = 1
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+\hypertarget{dcmdd156}{%
+\section{dcmdd156}\label{dcmdd156}}
+
+\textbf{Question}: ``Did you sleep more than usual?''
+
+\textbf{Visibility}: \protect\hyperlink{cmdd55}{cmdd55} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd157}{%
+\section{dcmdd157}\label{dcmdd157}}
+
+\textbf{Question}: ``Were you more hungry or did you eat more?''
+
+\textbf{Visibility}: \protect\hyperlink{cmdd55}{cmdd55} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd158}{%
+\section{dcmdd158}\label{dcmdd158}}
+
+\textbf{Question}: ``Were you able to cheer up, at least temporarily, when something happened to make you feel better?''
+
+\textbf{Visibility}: \protect\hyperlink{cmdd55}{cmdd55} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd159}{%
+\section{dcmdd159}\label{dcmdd159}}
+
+\textbf{Question}: ``Were you more sensitive than usual? (like things hurt your feelings more)''
+
+\textbf{Visibility}: \protect\hyperlink{cmdd55}{cmdd55} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{dcmdd160}{%
+\section{dcmdd160}\label{dcmdd160}}
+
+\textbf{Question}: ``Did you feel weighed down, like your arms, legs were heavy or that you couldn't move?''
+
+\textbf{Visibility}: \protect\hyperlink{cmdd55}{cmdd55} = 1
+
+\textbf{Item Type}: Single-select radio button
+
+\textbf{Responses}:
+
+Value
+
+Label
+
+0
+
+No
+
+1
+
+Yes
+
+9
+
+Unknown
+
+\hypertarget{cmdd_end}{%
+\section{cmdd\_end}\label{cmdd_end}}
+
+\textbf{Question}: ``\emph{INTERVIEWER: END of \textbf{Major Depression} section.}''
+
+\textbf{Visibility}: \emph{Always}
+
+\textbf{Item Type}: User Message/instructions
+
+\textbf{Responses}: \emph{This item is a markdown message}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}

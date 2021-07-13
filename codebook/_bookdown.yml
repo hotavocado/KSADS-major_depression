@@ -1,0 +1,5 @@
+book_filename: "NIMH_KSADS_applet_codebook"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Section "
